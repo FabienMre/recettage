@@ -40,7 +40,7 @@
 
             <!-- Branding Image -->
             <a class="navbar-brand" href="{{ url('/') }}">
-                Laravel
+                Cahier de recettage
             </a>
         </div>
 
@@ -48,29 +48,18 @@
             <!-- Left Side Of Navbar -->
             <ul class="nav navbar-nav">
                 <li><a href="{{ url('/home') }}">Home</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Blog<span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="{{ route('post.index') }}">Articles</a></li>
-                        @if(Auth::check())
-                            <li><a href="{{ route('post.create') }}">Rédiger un article</a></li>
-                        @endif
-                    </ul>
-                </li>
                 @if(Auth::check())
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Projets<span class="caret"></span>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Cahiers<span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="{{ route('project.create') }}">Soumettre un projet</a></li>
+                            <li><a href="{{ route('plan.create') }}">Soumettre un cahier de recettage</a></li>
                             @if(Auth::user()->isAdmin)
-                                <li><a href="{{ route('project.index') }}">Liste des projets</a></li>
+                                <li><a href="{{ route('plan.index') }}">Liste de cahier de recettage</a></li>
                             @endif
                         </ul>
                     </li>
                 @endif
-                <li><a href="{{ url('/contact') }}">Contact</a></li>
             </ul>
 
             <!-- Right Side Of Navbar -->

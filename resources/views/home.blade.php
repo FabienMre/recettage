@@ -10,8 +10,8 @@
                     <div class="panel-body">
                         You are logged in!
                     </div>
-                    <h4>Your name is {{ Auth::user()->name }}</h4>
-                    <h4>Your email is {{ Auth::user()->email }}</h4>
+                    <h4>Vous êtes {{ Auth::user()->name }}</h4>
+                    <h4>Votre mail est {{ Auth::user()->email }}</h4>
                 </div>
             </div>
         </div>

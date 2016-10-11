@@ -21,10 +21,10 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/home', 'HomeController@index');
 
     Route::resource('/post', 'PostController');
-    Route::resource('/comment', 'CommentController');
     Route::resource('/user', 'UserController');
     Route::resource('/project', 'ProjectController');
     Route::resource('/password', 'PasswordController');
+    Route::resource('/plan', 'PlanController');
 
 
     Route::get('contact',
